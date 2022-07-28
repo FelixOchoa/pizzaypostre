@@ -5,6 +5,7 @@ import NavBar from "../components/navbar/NavBar";
 import Pizza from "./Pizza";
 import Dessert from "./Dessert";
 import AboutMe from "./AboutMe";
+import Page404 from "../components/404";
 
 function Home() {
   let navigate = useNavigate();
@@ -33,10 +34,14 @@ function Home() {
     <>
       <NavBar handleLogOut={handleLogout} />
       <Routes>
-        <Route path="/*" element={<Pizza />} />
+        <Route path="/" element={<Pizza />} />
         <Route path="/pizzas" element={<Pizza />} />
         <Route path="/desserts" element={<Dessert />} />
         <Route path="/aboutme" element={<AboutMe />} />
+        <Route
+          path="*"
+          element={<Page404 message={"Página no encontrada"} />}
+        ></Route>
       </Routes>
     </>
   );
