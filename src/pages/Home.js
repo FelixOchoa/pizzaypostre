@@ -1,15 +1,16 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import NavBar from "../components/navbar/NavBar";
-import { Routes, Route } from "react-router-dom";
+import Pizza from "./Pizza";
+import Dessert from "./Dessert";
+import AboutMe from "./AboutMe";
 
 function Home() {
   let navigate = useNavigate();
 
   useEffect(() => {
     if (!localStorage.getItem("user")) {
-      console.log("no hay usuario");
       navigate("/login");
     }
   }, [navigate]);
@@ -30,13 +31,13 @@ function Home() {
 
   return (
     <>
-      <NavBar />
+      <NavBar handleLogOut={handleLogout} />
       <Routes>
-        <Route path="/*" element={<div>Soy el Home</div>} />
-        <Route path="/pizzas" element={<div>pizzas</div>} />
-        <Route path="/desserts" element={<div>postres</div>} />
+        <Route path="/*" element={<Pizza />} />
+        <Route path="/pizzas" element={<Pizza />} />
+        <Route path="/desserts" element={<Dessert />} />
+        <Route path="/aboutme" element={<AboutMe />} />
       </Routes>
-      <button onClick={handleLogout}>LogOut</button>
     </>
   );
 }
