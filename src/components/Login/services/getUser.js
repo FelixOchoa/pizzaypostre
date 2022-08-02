@@ -1,6 +1,6 @@
 const url = "https://reqres.in/api/login";
 
-export const loginService = async (email, password) => {
+export const getUser = async (email, password) => {
   const response = await fetch(url, {
     method: "POST",
     headers: {

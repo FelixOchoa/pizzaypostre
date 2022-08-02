@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import { ImageLogin } from "../components/Login/ImageLogin";
-import { loginService } from "../services/Login";
+import { getUser } from "../components/Login/services/getUser";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
@@ -16,7 +16,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const { token } = await loginService(email, password);
+      const { token } = await getUser(email, password);
       setEmail("");
       setPassword("");
       localStorage.setItem("user", JSON.stringify({ email, token }));
