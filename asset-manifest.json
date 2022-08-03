@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/pizzaypostre/static/css/main.856ccc4a.css",
+    "main.js": "/pizzaypostre/static/js/main.08105136.js",
+    "static/js/787.ea7e3fa2.chunk.js": "/pizzaypostre/static/js/787.ea7e3fa2.chunk.js",
+    "index.html": "/pizzaypostre/index.html",
+    "main.856ccc4a.css.map": "/pizzaypostre/static/css/main.856ccc4a.css.map",
+    "main.08105136.js.map": "/pizzaypostre/static/js/main.08105136.js.map",
+    "787.ea7e3fa2.chunk.js.map": "/pizzaypostre/static/js/787.ea7e3fa2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.856ccc4a.css",
+    "static/js/main.08105136.js"
+  ]
+}
