@@ -35,6 +35,7 @@ function Home() {
       <NavBar handleLogOut={handleLogout} />
       <Routes>
         <Route path="/" element={<Pizza />} />
+        <Route path="/home" element={<Pizza />} />
         <Route path="/pizzas" element={<Pizza />} />
         <Route path="/desserts" element={<Dessert />} />
         <Route path="/aboutme" element={<AboutMe />} />

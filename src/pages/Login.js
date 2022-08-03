@@ -10,7 +10,7 @@ const Login = () => {
   const [password, setPassword] = useState("");
 
   if (localStorage.getItem("user")) {
-    navigate("/");
+    navigate("/home");
   }
 
   const handleSubmit = async (e) => {
@@ -20,7 +20,7 @@ const Login = () => {
       setEmail("");
       setPassword("");
       localStorage.setItem("user", JSON.stringify({ email, token }));
-      navigate("/");
+      navigate("/home");
     } catch (error) {
       console.log(error);
     }

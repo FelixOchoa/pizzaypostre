@@ -1,7 +1,7 @@
 import React from "react";
 import { getTime } from "../pizza/services/getTime";
 
-const Card = ({ name, img, ubication, time }) => {
+const Card = ({ name, img, ubication, time, id }) => {
   const { open, color } = getTime(time);
 
   return (
@@ -13,9 +13,7 @@ const Card = ({ name, img, ubication, time }) => {
           className="rounded-xl rounded-b-none object-cover h-32 w-auto"
         />
         <div className="mt-4 mx-6 flex justify-between items-center">
-          <span className="font-bold text-sm">
-            {name.length > 15 ? name.substring(0, 15) + "..." : name}
-          </span>
+          <span className="truncate font-bold text-sm">{name}</span>
           <span className={`text-gray-200 text-xs rounded-xl ${color} p-1`}>
             {open}
           </span>
