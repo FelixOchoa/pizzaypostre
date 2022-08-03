@@ -1,4 +1,4 @@
-import { db } from "../../../Firebase/firebase";
+import { db } from "../../../Firebase/Firebase";
 import { collection, getDocs } from "firebase/firestore";
 
 const collectionPizza = collection(db, "pizzas");
